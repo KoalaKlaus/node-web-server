@@ -1,3 +1,5 @@
+// https://intense-ravine-78526.herokuapp.com/
+
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -44,6 +46,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Page',
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Portfolio',
     });
 });
 
